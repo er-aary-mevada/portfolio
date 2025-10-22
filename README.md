@@ -117,7 +117,26 @@ portfolio/
 
 ## Deployment Options
 
-### GitHub Pages
+### GitHub Pages (Automatic Deployment - Recommended)
+**This portfolio includes GitHub Actions for automatic deployment!**
+
+1. **Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Deploy portfolio"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages**:
+   - Go to your repository **Settings** > **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - The deployment will start automatically
+
+3. **Automatic Updates**:
+   - Every time you push to `main` branch, your site will automatically update
+   - Your site will be available at: `https://username.github.io/repository-name`
+
+### Manual GitHub Pages
 1. Create a new repository
 2. Upload your files
 3. Go to Settings > Pages
