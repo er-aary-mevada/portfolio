@@ -335,6 +335,13 @@ body {
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Dark theme stats cards */
+[data-theme="dark"] .stat {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .stat:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
@@ -345,10 +352,31 @@ body {
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Dark theme stat hover */
+[data-theme="dark"] .stat:hover {
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3), 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-color: rgba(102, 126, 234, 0.4);
+}
+
+.about-stats .stat h3 {
+    font-size: 2rem;
+    color: #5a67d8 !important; /* Bright blue color */
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(90, 103, 216, 0.3);
+}
+
+/* Dark theme stats */
+[data-theme="dark"] .about-stats .stat h3 {
+    color: #7c3aed !important; /* Purple color for dark theme */
+    text-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+
 .stat h3 {
     font-size: 2rem;
-    color: #667eea;
+    color: #667eea !important; /* Force blue color */
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .stat p {
