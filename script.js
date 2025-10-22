@@ -160,7 +160,7 @@ function showNotification(message, type = 'info') {
         position: 'fixed',
         top: '20px',
         right: '20px',
-        padding: '15px 20px',
+        padding: '0px 1px',
         borderRadius: '5px',
         color: 'white',
         fontWeight: '500',
