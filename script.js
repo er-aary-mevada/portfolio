@@ -314,15 +314,15 @@ function initThemeToggle() {
     themeToggle.className = 'theme-toggle';
     themeToggle.setAttribute('aria-label', 'Toggle dark mode');
     
-    // Get current theme (should be 'dark' by default now)
-    let savedTheme = localStorage.getItem('theme') || 'dark';
+    // Force light theme by default (clear any previous dark theme)
+    localStorage.removeItem('theme'); // Clear previous theme preference
+    let savedTheme = 'light'; // Always start with light theme
     
-    // Ensure dark theme is applied
-    document.documentElement.setAttribute('data-theme', savedTheme);
+    // Force light theme to be applied
+    document.documentElement.setAttribute('data-theme', 'light');
     
-    // Set initial icon based on current theme
-    const actualTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    updateThemeIcon(themeToggle, actualTheme);
+    // Set initial icon based on light theme
+    updateThemeIcon(themeToggle, 'light');
     
     // Listen for system theme changes (but keep dark as default)
     if (window.matchMedia) {
